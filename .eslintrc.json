@@ -21,6 +21,15 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "rules": {
+    "react/no-unsafe": [
+      2,
+      {
+        "checkAliases": true
+      }
+    ],
+    "react/no-deprecated": 2
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
