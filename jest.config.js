@@ -1,1 +1,3 @@
-export const setupFilesAfterEnv = ['<rootDir>/testSetup.js']
+module.exports = {
+  setupFilesAfterEnv: ['<rootDir>/testSetup.js']
+}
