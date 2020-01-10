@@ -12,31 +12,18 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          presets: [['@babel/preset-env', {
-            targets: [
-              'last 2 versions',
-              'not dead',
-              'not < 2%'
-            ],
-            useBuiltIns: 'entry'
-          }], '@babel/preset-react'],
-          plugins: [
-            'react-hot-loader/babel',
-            '@babel/plugin-proposal-class-properties',
-            '@babel/plugin-syntax-dynamic-import'
-          ]
-        }
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-        exclude: /node_modules/,
+        exclude: /node_modules/
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './src/index.html'
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
+  ]
 }
